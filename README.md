@@ -43,10 +43,8 @@ The main objectives were to:
 {"message":"HNGI14 Stage 0","track":"DevOps","username":"OJ"}
 
 
-## Security Controls
-
+**## Security Controls**
 The final deployed state included:
-
 -non-root user hngdevops
 -restricted passwordless sudo for:
 -/usr/sbin/sshd
@@ -59,8 +57,7 @@ The final deployed state included:
 -alid Let's Encrypt certificate installed
 -HTTP redirected permanently to HTTPS
 
-## Repository Structure
-
+**## Repository Structure**
 secure-nginx-linux-server/
 ├── README.md
 ├── .gitignore
@@ -68,12 +65,12 @@ secure-nginx-linux-server/
 ├── configs/
 └── screenshots/
 
-Key Configuration Files
+**## Key Configuration Files**
 -configs/nginx-site.conf
 -configs/ssh-hardening.conf
 -configs/sudoers-hngdevops.txt
 
-## Evidence
+**## Evidence**
 EC2 Instance
 DNS Propagation
 Package Installation Verification
@@ -86,22 +83,21 @@ HTTPS API Verification
 Certbot Renewal
 Certificate Issuer
 
-
-## Documentation
+**## Documentation**
 Additional details are in:
 -docs/architecture.md
 -docs/implementation-notes.md
 -docs/limitations-and-further-work.md
 -docs/verification-checklist.md
 
-## Limitations
+**## Limitations**
 This deployment is intentionally manual and single-node. It does not include infrastructure as code, CI/CD, monitoring, centralized logging, or high availability.
 
-## Further Work
+**## Further Work**
 Possible next steps include:
-rebuilding the infrastructure with Terraform
-automating provisioning with Ansible
-adding CI/CD pipelines
-integrating monitoring and log aggregation
-extending the service behind Nginx
-improving operational resilience with load balancing and autoscaling
+-rebuilding the infrastructure with Terraform
+-automating provisioning with Ansible
+-adding CI/CD pipelines
+-integrating monitoring and log aggregation
+-extending the service behind Nginx
+-improving operational resilience with load balancing and autoscaling
